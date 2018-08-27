@@ -1,0 +1,197 @@
+
+:root {
+    --newtab-search-icon: url(/q/img/icon-tvtrope.png);
+    --newtab-textbox-background-color: #FFFFE0;
+    --newtab-search-border-color: #B0C4DE;
+    --newtab-textbox-focus-color: #6495ED;
+    --newtab-search-icon-color: #000;
+    --newtab-textbox-focus-boxshadow: #ccc;
+}
+
+html { box-sizing:border-box }*, *:before, *:after{ box-sizing:inherit }
+html,body {
+    font-family:Verdana,sans-serif;
+    font-size:15px;
+    line-height:1.5 
+}
+
+main {
+    margin: auto;
+    padding-bottom: 68px;
+    width: 274px; 
+    background-color: #f4f4f4;
+}
+
+
+main section {
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+
+.search-wrapper {
+    cursor: default;
+    display: flex;
+    height: 35px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%; 
+}
+
+.search-wrapper input {
+    background: var(--newtab-textbox-background-color) var(--newtab-search-icon) 8px center/18px no-repeat;
+    border: solid 1px var(--newtab-search-border-color);
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+    font-size: 15px;
+    -moz-context-properties: fill;
+
+    fill: var(--newtab-search-icon-color);
+    padding-left:36px;
+    padding-inline-end: 36px;
+    padding-inline-start: 34px;
+    width: 100%; 
+}
+
+.search-wrapper input:dir(rtl) {
+    background-position-x: right 8px; 
+}
+
+.search-wrapper:hover input {
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.25); 
+}
+
+.search-wrapper:active input,
+.search-wrapper input:focus {
+    border: 1px solid var(--newtab-textbox-focus-color);
+    box-shadow: var(--newtab-textbox-focus-boxshadow); 
+}
+
+.search-wrapper .search-button {
+    background: url("/q/img/svg/forward.svg") no-repeat center center;
+    background-size: 16px 16px;
+    border: 0;
+    border-radius: 0 3px 3px 0;
+    fill: var(--newtab-search-icon-color);
+    height: 100%;
+    offset-inline-end: 0;
+    position: absolute;
+    width: 36px;
+    right: 1px;
+}
+
+.search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
+    background-color: rgba(12, 12, 13, 0.1);
+    cursor: pointer; 
+}
+
+.search-wrapper .search-button:active {
+    background-color: rgba(12, 12, 13, 0.2); 
+}
+
+.search-wrapper .search-button:dir(rtl) {
+    transform: scaleX(-1); 
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; 
+}
+
+
+.card-show-container {
+    padding: 0.01em 16px;
+}
+
+.card-show {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.x-center {
+    text-align: center !important;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.episodes-box {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    padding-bottom: 6px;
+}
+
+.episodes-box h3:first-child{
+    padding-top: 6px;
+}
+
+.episodes-box h3{
+    padding-bottom: 3px;
+    margin: 0;
+    line-height: 0;
+}
+
+.episodes-box p img {
+    max-width: 203px;
+    float: left;
+    padding: 5px 6px 0 0;
+}
+
+section .column div h2:first-child{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+@media (min-width: 482px) {
+    main {
+    width: 402px;  
+    }
+    .row {
+        display: inherit;
+    }
+}
+@media (min-width: 610px) {
+    main {
+        width: 530px;
+    } 
+    .row {
+        display: flex;
+    }
+}
+@media (min-width: 866px) {
+    main {
+        width: 786px; } 
+    .row {
+        display: flex;
+    }}
+@media (min-width: 1122px) {
+    main {
+        width: 1041px; }
+        .row {
+        display: flex;
+    }
+}
